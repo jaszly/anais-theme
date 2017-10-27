@@ -1,2 +1,2 @@
 # anais-theme
-A miniml tumblr theme
+A minimal yet functional theme 
