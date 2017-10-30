@@ -33,27 +33,46 @@
     <div class="container">
       {block:Posts}
 
-
+      <!-- TEXT POSTS -->
       {block:Text}
        <h2>{Title}</h2>
        <p>{Body}</p>
       {/block:Text}
-      <div class="panel panel-default">
-       <div class="panel-heading">
-         <h3 class="panel-title">{Caption}</h3>
-       </div>
-       <div class="panel-body">
-        <img src="{PhotoURL-500}"/>
-       </div>
-      </div>
-
+       <!-- PHOTO POSTS -->
       {block:Photo}
-
-      {Caption}
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <img src="{PhotoURL-200}"/>
+          panel content
+          <p>Content by FYMB © </p>
+        </div>
+      </div class="panel-footer"> this is the {Caption} </div>
+      <!-- {/block:Photo} -->
+        <!-- PHOTOSETS -->
+      {block:Photoset}
+        <img src="{PhotoURL-200}"
+            width="{PhotoWidth-200}"height="{PhotoHeight-200}" />
       {/block:Photo}
-      {block:Quote} -->
+      <!-- ASK POSTS -->
+    {block:Answer}
+      <div class="question">
+        <div class="asker">{Asker}</div>
+        <div class"asker-question">{Question}</div>
+        <img class"asker-avi" src="{AnswererPortraitURL-24}" alt="">
+      </div>
+       {block:Answerer}
+        <div class="answer">
+          <div class="answerer">{Answerer}</div>
+          <div class="answerer-answer">{Answer}</div>
+          <img class="answerer-avi" src="{AnswererPortraitURL-24}" alt="">
+        </div>
+      {/block:Answerer}
+   {/block:Answer}
 
-      {/block:Posts}
+
+
+
+{/block:Posts}
     </div>
 
 
