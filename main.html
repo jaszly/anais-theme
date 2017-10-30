@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{Title}</title>
     <!-- Bootstrap CSS -->
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       rel="stylesheet">
-
+<!-- Styles -->
  <style type="text/css">
   body {
     padding-top: 60px;
   }
+  /*Tumblr posts styles*/
   .container {
     width: 550px;
   }
+  /*End post styles*/
 </style>
 
  </head>
@@ -28,7 +30,33 @@
       </div>
     </nav>
 
-<h5>fymbeauty</h5>
+    <div class="container">
+      {block:Posts}
+
+
+      {block:Text}
+       <h2>{Title}</h2>
+       <p>{Body}</p>
+      {/block:Text}
+      <div class="panel panel-default">
+       <div class="panel-heading">
+         <h3 class="panel-title">{Caption}</h3>
+       </div>
+       <div class="panel-body">
+        <img src="{PhotoURL-500}"/>
+       </div>
+      </div>
+
+      {block:Photo}
+
+      {Caption}
+      {/block:Photo}
+      {block:Quote} -->
+
+      {/block:Posts}
+    </div>
+
+
 <!-- Bootstrap JS -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
 </script>
